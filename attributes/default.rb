@@ -77,3 +77,6 @@ node.default['ambari']['database']['password'] = 'bigdata'
 # JDBC attributes, will only be used if url is specified and db type isn't 'embedded'.
 node.default['ambari']['jdbc']['url'] = '' # leave blank if no remote file
 node.default['ambari']['jdbc']['path'] = '/usr/share/java/mysql-connector-java.jar'
+
+
+node.default['ambari']['java']['path'] = '/usr/lib/jvm/jdk1.8.0_121'

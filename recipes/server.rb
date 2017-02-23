@@ -60,7 +60,7 @@ else
 end unless node['ambari']['database']['type'] == 'embedded'
 
 execute 'setup ambari-server' do
-  command "ambari-server setup #{db_opts} -s && touch /etc/ambari-server/.configured"
+  command "ambari-server setup -j #{node['ambari']['java']['path']} #{db_opts} -s && touch /etc/ambari-server/.configured"
   creates '/etc/ambari-server/.configured'
 end
   
